@@ -1,0 +1,15 @@
+<h1>Users List</h1>
+{{#each users}}
+  <div>
+    <p>Name: {{this.name}}</p>
+    <p>Email: {{this.email}}</p>
+    
+    {{#if this.isAdmin}}
+      <p>Role: Admin</p>
+    {{else}}
+    <p>Role: User</p>
+      <a href="/admin/change-role/{{this._id}}">Change to Admin</a>
+    {{/if}}
+    <br><br>
+  </div>
+{{/each}}

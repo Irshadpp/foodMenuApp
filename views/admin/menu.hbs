@@ -1,0 +1,25 @@
+<h1>Admin Menu</h1>
+<h3>Food Items in your Menu</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Food Name</th>
+        <th>Category</th>
+        <!-- Add other table headers here if needed -->
+      </tr>
+    </thead>
+    <tbody>
+      {{#each menu}}
+      <tr>
+        <td>{{this.foodName}}</td>
+        <td>{{this.category}}</td>
+        <!-- Add other table data here if needed -->
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <br><br><br>
+<a href="/admin/add-menu-items">Add Menu Items</a>
+<br><br>
+<a href="/admin/users">Users List</a>
+<!-- Display the menu here -->
